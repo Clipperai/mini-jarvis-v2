@@ -24,4 +24,9 @@ A Python-based voice assistant that automates daily tasks like playing music, se
 
 ---
 
-## 📂 Project Structure
+## 📦 Installation
+
+```bash
+git clone https://github.com/Clipperai/mini-jarvis-v2.git
+cd mini-jarvis-v2
+pip install -r requirements.txt
