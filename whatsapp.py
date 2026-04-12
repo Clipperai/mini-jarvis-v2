@@ -7,8 +7,8 @@ from listener import take_command
 
 # CONTACTS
 contacts = {
-    "home": "+919084877564",
-    "vishu": "+919528185838"
+    "home": "++91789456321",
+    "vishu": "+911234567899"
 }
 
 
