@@ -1,6 +1,5 @@
 from apps import open_app
 import webbrowser
-import datetime
 from voice import speak
 from whatsapp import send_whatsapp_message
 import pywhatkit as kit
