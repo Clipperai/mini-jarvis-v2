@@ -2,8 +2,7 @@ from apps import open_app
 import datetime
 import webbrowser
 from voice import speak
-from whatsapp import send_whatsapp_message
-import pywhatkit as kit
+
 
 
 sites = {
@@ -14,10 +13,7 @@ sites = {
 
 def run_command(command):
     try: 
-        if command.startswith("play"):
-            kit.playonyt(command)  #type: ignore
-
-        elif command.startswith("open"):
+        if command.startswith("open"):
             command = command.replace('open', ' ').strip()
             if command in sites:
               webbrowser.open(sites[command])
@@ -38,9 +34,6 @@ def run_command(command):
             search_query = command.replace("search", "")
             webbrowser.open("https://www.google.com/search?q=" + search_query)
             speak("Searching for " + search_query)
-        
-        elif "send whatsapp message" in command:
-            send_whatsapp_message()
     
     except:
         return ""
