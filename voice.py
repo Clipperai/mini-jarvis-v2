@@ -1,15 +1,13 @@
-import pyttsx3
+from gtts import gTTS 
+import streamlit as st # type: ignore
+   
 
 def speak(text):
-   try:
-    engine = pyttsx3.init()
-    engine.setProperty('rate', 180)
+    
 
-    print("Jarvis said: ",text)
-    engine.say(text)
-    engine.runAndWait()
+    tts = gTTS(text)
+    tts.save("output.mp3")
 
-   except:
-     print("Error")
-       
+    audio_file = open("output.mp3", "rb")
+    st.audio(audio_file.read(), format="audio/mp3") 
 
